@@ -21,7 +21,7 @@ A modern, fully responsive restaurant website built with React, Vite, React Rout
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [React Router](https://reactrouter.com/)
-- CSS (no Tailwind, Bootstrap, or component libraries)
+- CSS 
 
 ## Getting started
 
@@ -32,13 +32,13 @@ Install [Node.js](https://nodejs.org/) version 18 or newer.
 ### Installation
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/shristi76/delicious-hub
 cd delicious-hub
 npm install
 npm run dev
 ```
 
-Open the local URL shown in your terminal, normally `http://localhost:5173`.
+Open `http://localhost:5173`.
 
 ### Production build
 
