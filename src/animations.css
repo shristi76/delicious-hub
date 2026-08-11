@@ -1,0 +1,35 @@
+/* Small, intentional motion that keeps the restaurant experience polished. */
+.navbar { animation:header-drop .55s cubic-bezier(.2,.8,.2,1) both; }
+.page-hero .container { animation:content-rise .75s .08s cubic-bezier(.2,.8,.2,1) both; }
+.hero-content { animation:content-rise .8s .12s cubic-bezier(.2,.8,.2,1) both; }
+
+.section-heading { animation:content-rise .6s ease both; }
+.card-grid .food-card { animation:card-rise .6s cubic-bezier(.2,.8,.2,1) both; }
+.card-grid .food-card:nth-child(2) { animation-delay:.1s; }
+.card-grid .food-card:nth-child(3) { animation-delay:.2s; }
+.card-grid .food-card:nth-child(4) { animation-delay:.3s; }
+.features .feature { animation:card-rise .6s ease both; }
+.features .feature:nth-child(2) { animation-delay:.12s; }
+.features .feature:nth-child(3) { animation-delay:.24s; }
+.testimonial { transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.testimonial:hover { transform:translateY(-6px); border-color:#dcc1b3; box-shadow:0 14px 30px rgba(55,35,25,.09); }
+
+.button { position:relative; overflow:hidden; isolation:isolate; }
+.button::before { content:''; position:absolute; inset:0; z-index:-1; background:rgba(255,255,255,.16); transform:translateX(-105%); transition:transform .4s ease; }
+.button:hover::before { transform:translateX(0); }
+.gallery-card { transition:box-shadow .35s ease; }
+.gallery-card:hover { box-shadow:0 16px 28px rgba(53,30,22,.18); }
+.cta .button { animation:soft-pulse 2.5s ease-in-out infinite; }
+.contact-item { transition:transform .25s ease; }
+.contact-item:hover { transform:translateX(5px); }
+.form-card { animation:content-rise .7s .15s cubic-bezier(.2,.8,.2,1) both; }
+
+@keyframes header-drop { from { opacity:0; transform:translateY(-14px); } to { opacity:1; transform:translateY(0); } }
+@keyframes content-rise { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes card-rise { from { opacity:0; transform:translateY(18px) scale(.985); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes soft-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(255,255,255,0); } 50% { box-shadow:0 0 0 8px rgba(255,255,255,.12); } }
+
+@media (prefers-reduced-motion:reduce) {
+  .navbar,.page-hero .container,.hero-content,.section-heading,.card-grid .food-card,.features .feature,.form-card { animation:none !important; }
+  .cta .button { animation:none; }
+}

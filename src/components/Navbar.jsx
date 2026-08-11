@@ -11,7 +11,6 @@ const links = [
 ];
 
 function Navbar() {
-  // useState remembers whether the mobile navigation is open.
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -30,7 +29,7 @@ function Navbar() {
         </NavLink>
 
         <button
-          className="menu-toggle"
+          className={menuOpen ? 'menu-toggle menu-toggle--open' : 'menu-toggle'}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
